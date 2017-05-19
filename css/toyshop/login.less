@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+//引入公共样式
+@import "public.less";
+
+body{
+    background-image: url(./../../image/toyshop/login-bg.jpg);
+}
+main{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 999;
+
+    & .modal-panel,&::after {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    & .modal-panel{
+        margin: auto;
+        background-color: #fff;
+        border-radius: 6px;
+        height: 140px;
+        overflow: hidden;
+        width: 250px;
+        z-index: 1;
+    }
+    .modal-panel{
+        box-shadow: 4px 4px 20px rgba(0,0,0,.2);
+        height: 350px;
+        width: 500px;
+        text-align: center;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .button-close{
+            border: 0;
+            height: 15px;
+            left: 15px;
+            padding: 0;
+            position: absolute;
+            top: 15px;
+            width: 15px;
+            opacity: .5;
+            .icon-iconfontguanbicopy{
+                font-size: 16px;
+                line-height: 1;
+                margin-right: 6px;
+                vertical-align: middle;
+                &::before{
+                    content: "\E614";
+                }
+            }
+        }
+        .background-image{
+            background-color: hsla(233,7%,56%,.1);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+        .col-logo{
+            float: left;
+            height: 100%;
+            width: 50%;
+            background-image:url(./../../image/toyshop/login-bg2.jpg);
+            .logo{
+                border-radius: 100%;
+                border: 2px solid #c5c5c5;
+                height: 19px;
+                margin: 80px 0 10px;
+                padding: 15px;
+                width: 19px;
+                display: inline-block;
+            }
+            .name{
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 110px;
+            }
+            .slogn{
+                font-size: 10px;
+                font-weight: 300;
+                letter-spacing: 4px;
+            }
+        }
+        .col-main{
+            float: left;
+            height: 100%;
+            width: 50%;
+            .header{
+                border-bottom: 1px solid #f1f1f1;
+                padding: 20px 0;
+            }
+            .body{
+                padding: 37px 0;
+                .wechat-login{
+                    .tip{
+                        font-size: 10px;
+                        font-weight: 300;
+                    }
+                    .qrcode{
+                        height: 110px;
+                        margin-bottom: 18px;
+                        width: 110px;
+                    }
+                }
+                .or{
+                    margin: 0 auto 18px;
+                    position: relative;
+                    width: 160px;
+                    .text{
+                        background-color: #fff;
+                        font-size: 12px;
+                        padding: 0 12px;
+                    }
+                    &::after {
+                        border-bottom: 1px solid #ececec;
+                        content: "";
+                        left: 0;
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        z-index: -1;
+                    }
+                }
+                .weibo-login{
+                    .icon-weibo{
+                        font-size: 16px;
+                        line-height: 1;
+                        margin-right: 6px;
+                        vertical-align: middle;
+                        color: #f8504f;
+                        display: inline-block;
+                        &::before {
+                            content: "\E609";
+                        }
+                    }
+                    .button-text{
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    &::after{
+        background-color: transparent;
+    }
+
+}

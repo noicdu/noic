@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reactive.css">
+    <script src="./js/jquery-1.7.2.js"></script>
+</head>
+<body>
+    <!--侧边开始-->
+    <div id="body-aside" class="body-aside">
+        <div class="b-aside-con" id="b-aside-con">
+            <div class="b-aside-header">分类</div>
+            <div class="menu-wrap">
+                <ul>
+                    <li><a href="javascript:void(0);">ifanRank</a></li>
+                    <li><a href="javascript:void(0);">ifanrQ</a></li>
+                    <li><a href="javascript:void(0);">MindTalk</a></li>
+                    <li><a href="javascript:void(0);">产品</a></li>
+                    <li><a href="javascript:void(0);">人物</a></li>
+                    <li><a href="javascript:void(0);">公司</a></li>
+                    <li><a href="javascript:void(0);">图记</a></li>
+                    <li><a href="javascript:void(0);">新创</a></li>
+                    <li><a href="javascript:void(0);">早报</a></li>
+                    <li><a href="javascript:void(0);">汽车</a></li>
+                    <li><a href="javascript:void(0);">游戏</a></li>
+                    <li><a href="javascript:void(0);">特稿</a></li>
+                    <li><a href="javascript:void(0);">生活</a></li>
+                    <li><a href="javascript:void(0);">范评</a></li>
+                    <li><a href="javascript:void(0);">视屏</a></li>
+                    <li><a href="javascript:void(0);">测评</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('#nav-menu').click(function() {
+                $('body').attr('class','body');
+                $('#body-aside').css('display','block').animate({opacity:1},200);
+                $('#b-aside-con').animate({left:'0px'},400);
+            });
+            $('#body-aside').click(function() {
+                $('body').removeAttr('class');
+                $('#b-aside-con').animate({left:'-250px'},400);
+                $('#body-aside').animate({opacity:0},300,function() {
+                    $('#body-aside').css('display','none');
+                });
+
+            });
+        });
+    </script>
+    <!--侧边结束-->
+
+    <!--头部开始-->
+    <header class="header">
+        <div class="header-sns">
+            <ul class="header-sns-icons">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="header-sns-about">
+                <li><i></i>下载客户端
+                    <div class="app-download">
+                        <div class="down-left">
+                            <img src="./image/index/top-nav-down-logo.png" alt="">
+                            <span>爱范儿</span>
+                            <span>iPhone & Android</span>
+                        </div>
+                        <div class="down-right">
+                            <img src="./image/index/ifanr-qrcode.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>关于我们</li>
+                <li>寻求报道</li>
+                <li>加入我们</li>
+            </ul>
+        </div>
+
+        <nav class="header-nav">
+            <div class="nav-menu"><a href="javascript:void(0);" id="nav-menu"></a></div>
+            <div class="nav-con">
+                <ul class="nav-con-left">
+                    <li><a href="javascript:void(0);">
+                        <img src="./image/index/logo.png" alt="">
+                    </a></li>
+                    <li><a href="javascript:void(0);">首页</a></li>
+                    <li><a href="./toyshop.html">玩物店</a></li>
+                    <li><a href="javascript:void(0);">AppSo</a></li>
+                    <li><a href="javascript:void(0);">创业社区</a></li>
+                    <li><a href="javascript:void(0);">知晓程序</a></li>
+                </ul>
+
+                <ul class="nav-con-right">
+                    <li class="nav-col1">
+                        <div class="nav-search">
+                            <input type="search" name="search" placeholder="小程序">
+                            <i></i>
+                        </div>
+                        <div class="nav-search-con" id="nav-search-con">
+                            <ul id="nav-search">
+                                <li>最近搜索</li>
+                                <li><a href="javascript:void(0);">小程序</a></li>
+                                <li><span id="search-clear">清除历史</span></li>
+                            </ul>
+                            <ul class="hot-search" id="hot-search">
+                                <li>最近大家在搜</li>
+                                <li><a href="javascript:void(0);">新 iPad</a></li>
+                                <li><a href="javascript:void(0);">共享单车</a></li>
+                                <li><a href="javascript:void(0);">小程序</a></li>
+                                <li><a href="javascript:void(0);">MWC2017</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-col2">
+                        <a href="javascript:void(0);" id="login">登录</a>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $(function() {
+            $('input[type="search"]').focus(function() {
+                $('#nav-search-con').slideDown(300);
+            });
+            $('#search-clear').click(function() {
+                $('#nav-search').hide();
+            });
+            $('#hot-search a').click(function() {
+                $('input[type="search"]').val($(this).html());
+            });
+            $('input[type="search"]').blur(function() {
+                $('#nav-search-con').slideUp(300);
+            });
+            $('#login').click(function() {
+                $('#login-bg').css({opacity:1,visibility:'visible'});
+                //$('body').attr('class','body');
+            });
+
+
+        });
+    </script>
+    <!--头部结束-->
+
+    <!--内容开始-->
+    <main>
+
+        <section class="main-sec-top">
+            <div class="sec-top-le top-col">
+                <div class="news-item-box">
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">公司</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">亚马逊在芝加哥的书店开了，这些有趣的地方值得一看</h1>
+                            <div class="news-description"><p>4 星以上的书才可以上架、网友评论作为推荐语，扫码看实时价格、除了买书还能玩 kindle 和喝咖啡。</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">公司</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">美德怒怼阿里巴巴假货，海外打假成新战场</h1>
+                            <div class="news-description"><p>假货问题在国内外都屡见不鲜，但阿里巴巴在海外的挑战似乎比国内更大。</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">产品</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">手机颜色战争</h1>
+                            <div class="news-description"><p>实际上，放眼整个手机市场，金属外壳的手机们早已不是去年那般只有「灰」、「银」、「金」。各个厂家，尤其是国产厂家，早已打响了色彩斑斓的手机颜色之战。</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">产品</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">苹果新品超全汇总：最中国风的 iPhone 来了，最便宜的 iPad 也来了</h1>
+                            <div class="news-description"><p>要不要出掉亮黑，换「红」苹果。</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">生活</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">十年后出不了国，买不了房，坐不了飞机，只因为现在你忽略了这个</h1>
+                            <div class="news-description"><p>我拖欠了信用卡账单、银行贷款，但只要我不买房不买车不出国，就不会有影响了吗？</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-bg"></div>
+                        <div class="news-tag"><a class="news-tag-label" href="javascript:void(0);">公司</a></div>
+                        <article class="news-item-content">
+                            <h1 class="news-headline">苹果罗技亚马逊“以换代修”为什么搞不下去，还不是因为被国人玩坏了</h1>
+                            <div class="news-description"><p>消费者与商家该做到的，是互相尊重，而不是互相伤害。</p></div>
+                        </article>
+                        <a href="javascript:void(0);" class="link-a"></a>
+                    </div>
+                </div>
+                <ol class="dots">
+                    <li class="dot" data-index="1">1</li>
+                    <li class="dot" data-index="2">2</li>
+                    <li class="dot" data-index="3">3</li>
+                    <li class="dot" data-index="4">4</li>
+                    <li class="dot" data-index="5">5</li>
+                    <li class="dot" data-index="6">6</li>
+                </ol>
+            </div>
+
+            <!--<div class="sec-top-mi top-col">
+                <div class="mind-talk-top">
+                    <a href="javascript:void(0);">
+                        <span class="span-font">MindTalk</span>
+                        <i></i>
+                    </a>
+                </div>
+
+                <div class="mind-talk-min">
+                    <a href="javascript:void(0);">
+                        <div></div>
+                        <p>限时免费 | 「撩」星座的同道大叔，有什么可复制的秘密？</p>
+                    </a>
+                    <p class="mind-talk-topic">嘉宾：郑辰昕 - 品牌营销高级经理</p>
+                </div>
+
+                <div class="mind-talk-bot">
+                    <a href="javascript:void(0);">马上参加</a>
+                    <p>03-22 20:00 开始</p>
+                </div>
+            </div>-->
+
+            <div class="sec-top-ri top-col">
+                <div class="right-top">
+                    <a href="javascript:void(0);">
+                        <span class="span-font">范团视频</span>
+                        <i></i>
+                    </a>
+                </div>
+                <div class="right-bottom">
+                    <a href="javascript:void(0);">
+                        <div class="video-img">
+                            <div class="video-play"></div>
+                        </div>
+                        <div class="video-test">
+                            <p>TechU：苹果发布红色版 iPhone 7，iPad 也出了新款 | 范团视频</p>
+                        </div>
+                    </a>
+                    <div class="video-item"><a href="javascript:void(0);">
+                        TechU：如何在睡眠日睡个好觉？ | 范团视频
+                    </a></div>
+                    <div class="video-item"><a href="javascript:void(0);">
+                        TechU：中国版“AlphaGo”击败日韩对手获围棋 AI 冠军 | 范团视频
+                    </a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec-bot">
+            <!--中间导航栏部分开始-->
+            <div class="sec-bot-nav">
+                <div id="sec-nav-box">
+                    <div class="sec-nav-box">
+                        <ul id="sec-nav-ul">
+                            <li class="sec-nav-active">最新</li>
+                            <li>玩物志</li>
+                            <li>每日早报</li>
+                            <li>新锐产品</li>
+                            <li>汽车评析</li>
+                            <li>专业评测</li>
+                            <li>行业报道</li>
+                            <li>人物访谈</li>
+                            <li>小程序</li>
+                        </ul>
+                        <div>
+                            <i id="clicks-col"></i>
+                            <i id="clicks-row"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--中间导航栏部分结束-->
+
+
+            <div class="sec-bot-row1">
+                <div class="bot-col">
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                    <div class="article-img"></div>
+                    <a class="article-label" href="javascript:void(0);">公司</a>
+                    <a class="article-bg" href="javascript:void(0);"></a>
+                    <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                    <div class="article-summary">首先你可能需要一套大房子。</div>
+                    <div class="author-info">
+                        <img src="" alt="">
+                        <span class="author-name">胡洋</span>
+                        <a href="javascript:void(0);" class="cover-block"></a>
+                    </div>
+                    <time>10 分钟前</time>
+                    <div class="article-meta">
+                        <span class="like ico">3</span>
+                        <span class="reply ico">0</span>
+                    </div>
+                </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-aside">
+                    <div class="aside-1">
+                        <div class="aside-1-head"><h3>快讯</h3></div>
+                        <ul>
+                            <li><a href="javascript:void(0);">
+                                <h2>百度的调整还在继续，给百度做“大脑”的人也离开了</h2>
+                                <div>6 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>财新：苹果CEO称会考虑投资其它中国手机应用企业</h2>
+                                <div>6 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>想让你把照片修得更好，这些滤镜应用还有摄影师加成</h2>
+                                <div>7 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>入华两年后，Airbnb中国终于确定了它的中文名“爱彼迎”</h2>
+                                <div>8 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>丁磊离职后 无人接盘的乐视汽车真的要完？</h2>
+                                <div>8 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>工信部：引导加强智能可穿戴设备研发应用</h2>
+                                <div>8 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>继三星之后 LG也在韩国推出移动支付服务</h2>
+                                <div>9 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>Pinterest今年营收有望达6亿美元 考虑IPO</h2>
+                                <div>9 小时前</div>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <h2>Win10中国政府专用版或将上市 方便使用监管</h2>
+                                <div>9 小时前</div>
+                            </a></li>
+                        </ul>
+                        <span id="aside-1-head">换一换</span>
+                    </div>
+                    <div class="aside-2"></div>
+                </div>
+            </div>
+
+            <div class="sec-bot-row2">
+                <section id="article-large-item" class="article-large-item">
+                    <div class="large-left">
+                        <i></i>
+                        <div class="top-line"></div>
+                        <p class="art-type"><a href="javascript:void(0);">大声</a></p>
+                        <p class="art-con"><a href="javascript:void(0);">“ 苹果在中国无法击败我们，这是因为他们依然存在短板。他们有时候可能过于倔强，并做出了许多好东西，比如操作系统，但我们在其他方面超越了他们。”</a></p>
+                        <div class="art-foot">
+                            <p>- 段永平</p>
+                            <time>4 小时前</time>
+                            <div>
+                                <span class="like ico">16</span>
+                                <span class="reply ico">11</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-right"></div>
+                </section>
+                <div class="article-con" id="article-con">
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                    <div class="article-item article-item-card">
+                        <div class="article-img"></div>
+                        <a class="article-label" href="javascript:void(0);">公司</a>
+                        <a class="article-bg" href="javascript:void(0);"></a>
+                        <h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3>
+                        <div class="article-summary">首先你可能需要一套大房子。</div>
+                        <div class="author-info">
+                            <img src="" alt="">
+                            <span class="author-name">胡洋</span>
+                            <a href="javascript:void(0);" class="cover-block"></a>
+                        </div>
+                        <time>10 分钟前</time>
+                        <div class="article-meta">
+                            <span class="like ico">3</span>
+                            <span class="reply ico">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec-load">
+                <div id="sec-load">
+                    <span>加载更多</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!--中部内容js部分-->
+    <script>
+        $(function() {
+            var timer = null;
+            var flag = true;
+            var a = 0;
+            var num = 0;
+            var asideCon = [
+                ["iPhone侵外观专利被令停售？北京知产法院为苹果翻案","41 分钟前"],
+                ["蔡文胜：股价波动是市场行为 美图用户多是白富美","46 分钟前"],
+                ["比尔-盖茨发文预热北大行：探讨中国发展等全球议题","48 分钟前"],
+                ["谷歌Hangouts 5月取消短信功能 转向企业市场","53 分钟前"],
+                ["北京：上千共享单车围住公交车站","1 小时前"],
+                ["WCA 2017世界电子竞技大赛召开年度发布会","1 小时前"],
+                ["腾讯公布管理层新布局 推动内容技术广告业务协同","1 小时前"],
+                ["美图2016年总营收15.8亿 经调整净亏损5.4亿元","1 小时前"],
+                ["红色iPhone特别版上手：苹果又一次创造了流行色","1 小时前"]
+            ];
+            var asideCon2 = [
+                ["百度的调整还在继续，给百度做“大脑”的人也离开了","6 小时前"],
+                ["财新：苹果CEO称会考虑投资其它中国手机应用企业","6 小时前"],
+                ["想让你把照片修得更好，这些滤镜应用还有摄影师加成","7 小时前"],
+                ["入华两年后，Airbnb中国终于确定了它的中文名“爱彼迎”","8 小时前"],
+                ["丁磊离职后 无人接盘的乐视汽车真的要完？","8 小时前"],
+                ["工信部：引导加强智能可穿戴设备研发应用","8 小时前"],
+                ["继三星之后 LG也在韩国推出移动支付服务","9 小时前"],
+                ["Pinterest今年营收有望达6亿美元 考虑IPO","9 小时前"],
+                ["Win10中国政府专用版或将上市 方便使用监管","9 小时前"]
+            ];
+            var zz = [
+                ["产品","【首发】红色 iPhone 图赏：这颜色，有毒！","这个红，究竟是怎样的红？","P3240249.jpg","IMG_1096.jpg","张博文","1 小时前","5","3"],
+                ["玩物志","喜欢花艺的她，在杯中造出了一座花园","&nbsp;春天好像悄然无声地到来了，前两天还在下大雨的广州，终于有些放晴。虽然没有大太阳，但是能感受到春天的气息。午休时，玩物志和同事一并出去走了走，她指着树上，说：“你看，那是木棉花吧，要是能拿来...","huazuo.png","108.pic_hd.jpg","玩物君","前天 10:28","7","0"],
+                ["早报","【早报】“微信指数”上线，你的热搜情况如何？/ 华为中兴占深圳去年 GDP 贡献前二 / 苹果称没被黑客入侵","MUJI 新产品：专为手机用户设计的 6 口袋新牛仔裤 / 摩拜推出 “红包车”，用现金奖励来让用户参与车辆调配 / 深圳去年 GDP 贡献 20 强：华为中兴前二，腾讯第五","1378950624813.jpg","chen-shi-wei.jpg","陈诗蔚","7 小时前","0","5"],
+                ["产品","【首发】红色 iPhone 图赏：这颜色，有毒！","这个红，究竟是怎样的红？","P3240249.jpg","IMG_1096.jpg","张博文","1 小时前","5","3"],
+                ["产品","【首发】红色 iPhone 图赏：这颜色，有毒！","这个红，究竟是怎样的红？","P3240249.jpg","IMG_1096.jpg","张博文","1 小时前","5","3"],
+                ["玩物志","喜欢花艺的她，在杯中造出了一座花园","&nbsp;春天好像悄然无声地到来了，前两天还在下大雨的广州，终于有些放晴。虽然没有大太阳，但是能感受到春天的气息。午休时，玩物志和同事一并出去走了走，她指着树上，说：“你看，那是木棉花吧，要是能拿来...","huazuo.png","108.pic_hd.jpg","玩物君","前天 10:28","7","0"],
+                ["早报","【早报】“微信指数”上线，你的热搜情况如何？/ 华为中兴占深圳去年 GDP 贡献前二 / 苹果称没被黑客入侵","MUJI 新产品：专为手机用户设计的 6 口袋新牛仔裤 / 摩拜推出 “红包车”，用现金奖励来让用户参与车辆调配 / 深圳去年 GDP 贡献 20 强：华为中兴前二，腾讯第五","1378950624813.jpg","chen-shi-wei.jpg","陈诗蔚","7 小时前","0","5"],
+                ["产品","【首发】红色 iPhone 图赏：这颜色，有毒！","这个红，究竟是怎样的红？","P3240249.jpg","IMG_1096.jpg","张博文","1 小时前","5","3"],
+                ["产品","【首发】红色 iPhone 图赏：这颜色，有毒！","这个红，究竟是怎样的红？","P3240249.jpg","IMG_1096.jpg","张博文","1 小时前","5","3"]
+            ];
+            over();
+            dttj(zz,num);
+            $(window).scroll(function() {
+                if($(window).scrollTop() >= 513){
+                    $('#sec-nav-box').attr('class','scroll-nav');
+                }else{
+                    $('#sec-nav-box').removeAttr('class');
+                }
+                if(flag && $(window).scrollTop() >= 2780){
+                    fun();
+                    over();
+                    dttj(zz,num);
+                    flag = false;
+                }
+            });
+            $('#clicks-col').click(function() {
+                $(this).css('color','#666').siblings().css('color','#b3b3b3');
+                $('.article-item').each(function() {
+                    $('.article-item').attr('class','article-item-2');
+                });
+                $('#article-large-item').css('width','836px');
+            });
+            $('#clicks-row').click(function() {
+                $(this).css('color','#666').siblings().css('color','#b3b3b3');
+                $('.article-item-2').each(function(i) {
+                    if(i%3 == 2 && i<6){
+                        $(this).removeClass('article-item-2').addClass('article-item article-item-card');
+                    }else if(i>6 && (i-6)%4 == 3){
+                        $(this).removeClass('article-item-2').addClass('article-item article-item-card');
+                    }else{
+                        $(this).removeClass('article-item-2').addClass('article-item');
+                    }
+
+                });
+                $('#article-large-item').css('width','1120px');
+            });
+            function over() {
+                $('.article-item').mouseover(function() {
+                    $(this).css({boxShadow:'1px 1px 20px 0px rgba(0,0,0,.1)',borderColor:'rgba(0,0,0,.08)',top:'-1px',left:'-1px'});
+                }).mouseout(function() {
+                    $(this).css({boxShadow:'none',borderColor:'',top:0,left:0});
+                });
+                $('.article-item-2').mouseover(function() {
+                    $(this).css({boxShadow:'1px 1px 20px 0px rgba(0,0,0,.1)',borderColor:'rgba(0,0,0,.08)',top:'-1px',left:'-1px'});
+                }).mouseout(function() {
+                    $(this).css({boxShadow:'none',borderColor:'',top:0,left:0});
+                });
+            }
+            $('#sec-load').click(fun);
+            function fun() {
+                for(var i=0;i<12;i++){
+                    if($('.article-item').length != 0){
+                        if(i%4 == 3){
+                            $('#article-con').append('<div class="article-item article-item-card"><div class="article-img"></div><a class="article-label" href="javascript:void(0);">公司</a><a class="article-bg" href="javascript:void(0);"></a><h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3><div class="article-summary">首先你可能需要一套大房子。</div><div class="author-info"><img src="" alt=""><span class="author-name">胡洋</span><a href="javascript:void(0);" class="cover-block"></a></div><time>10 分钟前</time><div class="article-meta"><span class="like ico">3</span><span class="reply ico">0</span></div></div>');
+                        }else{
+                            $('#article-con').append('<div class="article-item"><div class="article-img"></div><a class="article-label" href="javascript:void(0);">公司</a><a class="article-bg" href="javascript:void(0);"></a><h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3><div class="article-summary">首先你可能需要一套大房子。</div><div class="author-info"><img src="" alt=""><span class="author-name">胡洋</span><a href="javascript:void(0);" class="cover-block"></a></div><time>10 分钟前</time><div class="article-meta"><span class="like ico">3</span><span class="reply ico">0</span></div></div>');
+                        }
+                    }else{
+                        $('#article-con').append('<div class="article-item-2"><div class="article-img"></div><a class="article-label" href="javascript:void(0);">公司</a><a class="article-bg" href="javascript:void(0);"></a><h3>阿迪紧逼，销售疲弱，耐克凭什么净利润还大涨 20%？</h3><div class="article-summary">首先你可能需要一套大房子。</div><div class="author-info"><img src="" alt=""><span class="author-name">胡洋</span><a href="javascript:void(0);" class="cover-block"></a></div><time>10 分钟前</time><div class="article-meta"><span class="like ico">3</span><span class="reply ico">0</span></div></div>');
+                    }
+
+                }
+                over();
+                dttj(zz,num);
+            }
+            function dttj(obj,a) {
+                $('.article-label').html(obj[a][0]);
+                $('.article-item h3').html(obj[a][1]);
+                $('.article-summary').html(obj[a][2]);
+                $('.article-img').css({backgroundImage:'url(./image/index/'+obj[a][3]+')',backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'top center'});
+                $('.author-info img').attr('src','./image/index/'+obj[a][4]+'');
+                $('.author-inf .author-name').html(obj[a][5]);
+                $('.article-item time').html(obj[a][6]);
+                $('.like').html(obj[a][7]);
+                $('.reply').html(obj[a][8]);
+            }
+
+            $('#sec-nav-ul li').click(function() {
+                num = $(this).index();
+                if(num != 0){
+                    $('#article-large-item').css('display','none');
+                }else{
+                    $('#article-large-item').css('display','block');
+                }
+                dttj(zz,num);
+                $(this).attr('class','sec-nav-active').siblings().removeAttr('class');
+            });
+
+            $('.news-item').each(function(i) {
+                $('.news-item').eq(i).css({backgroundImage:'url(./image/index/'+(i+1)+'.jpg)',backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'50% 50%'})
+            });
+
+            $('.news-item').hover(function() {
+                clearInterval(timer);
+            },function() {
+                clearInterval(timer);
+                timer = setInterval(funImg,3000);
+            });
+            $('.news-item').eq(0).css({opacity:1,zIndex:11}).siblings().css({opacity:0,zIndex:10});
+            $('.dot').eq(0).css({color:'#333',backgroundColor:'#fff'}).siblings().css({color:'#fff',backgroundColor:'transparent'});
+            timer = setInterval(funImg,3000);
+            function funImg() {
+                $('.news-item').eq(a).animate({opacity:1,zIndex:11},1000).siblings().animate({opacity:0,zIndex:10},600);
+                $('.dot').eq(a).css({color:'#333',backgroundColor:'#fff'}).siblings().css({color:'#fff',backgroundColor:'transparent'});
+                a++;
+                if(a%7 == 6){
+                    a = 0;
+                }
+            }
+
+            $('.dot').click(function() {
+                clearInterval(timer);
+                a = $(this).index();
+                funImg();
+                timer = setInterval(funImg,3000);
+            });
+
+            $('#aside-1-head').toggle(function() {
+                getAside(asideCon);
+            },function() {
+                getAside(asideCon2);
+            });
+
+            function getAside(obj) {
+                $('.aside-1 li').each(function(i) {
+                    $('.aside-1 li h2').eq(i).html(obj[i][0]);
+                    $('.aside-1 li div').eq(i).html(obj[i][1]);
+                });
+            }
+        });
+    </script>
+    <!--内容结束-->
+
+    <div class="foot-box"></div>
+
+    <footer class="foot">
+        <section>
+            <div class="foot-wrapper">
+                <ul class="foot-wrapper-col1 col">
+                    <h5>让未来触手可及</h5>
+                    <li><a href="javascript:void(0);">爱范儿 : 报道未来，服务新生活引领者</a></li>
+                    <li><a href="javascript:void(0);">玩物志 : 新生活必需品</a></li>
+                    <li><a href="javascript:void(0);">AppSo : 让手机更好用的数字生活媒体</a></li>
+                    <li><a href="javascript:void(0);">MindStore : 服务于梦想行动家的社区</a></li>
+                    <li><a href="javascript:void(0);">SocialBase : 微信小程序生态云</a></li>
+                </ul>
+                <ul class="foot-wrapper-col2 col">
+                    <h5>关于我们</h5>
+                    <li><a href="javascript:void(0);">关于爱范儿</a></li>
+                    <li><a href="javascript:void(0);">社区规则</a></li>
+                    <li><a href="javascript:void(0);">加入我们</a></li>
+                    <li><a href="javascript:void(0);">商务合作</a></li>
+                </ul>
+                <ul class="foot-wrapper-col3 col">
+                    <h5>合作伙伴</h5>
+                    <li><a href="javascript:void(0);"><img src="./image/index/cdnzz-colored.png" alt=""></a></li>
+                    <li><a href="javascript:void(0);"><img src="./image/index/upyun-colored.png" alt=""></a></li>
+                    <li><a href="javascript:void(0);"><img src="./image/index/rongcloud-logo.png" alt=""></a></li>
+                </ul>
+                <div class="foot-wrapper-col4">
+                    <div class="foot-wrapper-downapp">
+                        <div class="foot-wrapper-wrap">
+                            <img src="./image/index/appdown.png" alt="应用下载二维码">
+                        </div>
+                        <span>全新爱范儿 App 现已适配</span>
+                        <span>Android 及 iPhone</span>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-copyright">
+                <a href="javascript:void(0);" class="an">粤 ICP 备 10211557 号</a>
+                <p>版权所有 © 广州爱范儿科技股份有限公司 2008 - 2016。以商业目的使用爱范儿网站内容需获许可。非商业目的使用授权遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>。</p>
+                <p>All content is made available under the CC BY-NC 4.0 for non-commercial use. Commercial use of this content is prohibited without explicit permission.</p>
+                <ul>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a>
+                        <div>
+                            <h4>关注爱范儿</h4>
+                            <img src="" alt="">
+                            <span>使用微信扫码关注爱范儿微信公众号</span>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);"></a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
+    <div id="login-bg" class="login-bg">
+            <div class="login-con">
+                <div class="login-con-c">
+                    <i id="close-login"></i>
+                    <ul class="modal-tabs" id="modal-tabs">
+                        <li>登录</li>
+                        <li>注册</li>
+                    </ul>
+                    <form id="uc-modal-normal" class="uc-modal-normal" method="post">
+                        <input type="text" name="username" placeholder="用户名">
+                        <i class="icon-email"></i>
+                        <input type="password" name="password" placeholder="密码">
+                        <i class="icon-pass"></i>
+                        <button type="submit" class="btn-login" id="btn-login">登录</button>
+                        <a href="javascript:void(0);">忘记密码</a>
+                        <div class="social-content">
+                            <p class="third-party">第三方账号登录：
+                                <i class="wx-login"></i>
+                                <i class="wb-login"></i>
+                            </p>
+                        </div>
+                        <div class="login-tip" id="login-tip">
+                            <span>
+                                <i></i>
+                                <span class="tip-test" id="login-test">请输入用户名..</span>
+                            </span>
+                        </div>
+                    </form>
+                    <form class="uc-modal-normal-register" method="post" id="register">
+                        <input type="email" name="email" placeholder="Email 地址">
+                        <i class="icon-email"></i>
+                        <div class="col">邮箱格式错误例:XXX@qq.com,xxx为数字、字母、下划线(鼠标移出可隐藏)</div>
+                        <input type="text" id="nick_name" name="nick_name" placeholder="昵称" class="register-nickname">
+                        <i class="icon-niche"></i>
+                        <div class="col">昵称不能为空(鼠标移出可隐藏)</div>
+                        <input type="password" name="password1" placeholder="密码">
+                        <i class="icon-pass"></i>
+                        <div class="col">密码不能少于六位(鼠标移出可隐藏)</div>
+                        <input type="password" id="password2" name="password2" placeholder="密码确认" class="register-password">
+                        <i class="icon-pass-2"></i>
+                        <div class="col">两次输入的密码不一致(鼠标移出可隐藏)</div>
+                        <button type="submit" class="btn-register" id="btn-register">注册</button>
+                        <a href="javascript:void(0);">忘记密码</a>
+                        <div class="social-content">
+                            <p class="third-party">第三方账号登录：
+                                <i class="wx-login"></i>
+                                <i class="wb-login"></i>
+                            </p>
+                        </div>
+                        <div class="login-tip" id="register-tip">
+                            <span>
+                                <i></i>
+                                <span class="tip-test" id="register-test">请输入密码</span>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+    </div>
+    <script>
+        $(function() {
+            var flag = [false,false,false,false];
+            var flag1 = false;
+            $('#modal-tabs li').eq(0).click(function() {
+                $(this).css({color:'#e12f11',borderBottom:'3px solid'}).siblings().css({color:'#666',borderBottom:'none'});
+                $('#uc-modal-normal').css('display','block').next().css('display','none');
+                $('#login-tip').css('display','none');
+            });
+            $('#modal-tabs li').eq(1).click(function() {
+                $(this).css({color:'#e12f11',borderBottom:'3px solid'}).siblings().css({color:'#666',borderBottom:'none'});
+                $('#uc-modal-normal').css('display','none').next().css('display','block');
+                $('#login-tip').css('display','none');
+            });
+            $('#close-login').click(function() {
+                $('#login-bg').css({opacity:0,visibility:'hidden'});
+            });
+            $('#btn-login').click(function(check) {
+                if($('.uc-modal-normal input[name="username"]').val() == ''){
+                    $('#login-tip').css('display','block');
+                    $('#login-test').html('请输入用户名..');
+                    check.preventDefault();
+                }else if($('.uc-modal-normal input[name="password"]').val() == ''){
+                    $('#login-tip').css('display','block');
+                    $('#login-test').html('请输入密码..');
+                    check.preventDefault();
+                }
+            });
+            $('#btn-register').click(function(check) {
+                if($('input[name="email"]').val() == ''){
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('邮箱不能为空..');
+                    check.preventDefault();
+                }else if($('input[name="nick_name"]').val() == ''){
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('昵称不能为空..');
+                    check.preventDefault();
+                }else if($('input[name="password1"]').val() == ''){
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('密码不能为空..');
+                    check.preventDefault();
+                }else if($('input[name="password2"]').val() == ''){
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('请确认密码..');
+                    check.preventDefault();
+                }else if(($('input[name="password1"]').val()) != ($('input[name="password2"]').val())){
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('输入的两次密码不一..');
+                    check.preventDefault();
+                }
+                if(flag[0] && flag[1] && flag[2] && flag[3]){
+                    $('#register-tip').css('display','none');
+                    alert("注册成功");
+                }else{
+                    $('#register-tip').css('display','block');
+                    $('#register-test').html('注册失败，请检查输入项是否有错');
+                    check.preventDefault();
+                }
+//                var email = $('input[name="email"]').val();
+//                var nickName = $('input[name="nick_name"]').val();
+//                var pass = $('input[name="password1"]').val();
+                /*$.post("get.php",{email:email,nick_name:nickName,password:pass},function(data) {
+                    obj = JSON.parse(data);
+                    alert(data);
+                });*/
+
+            });
+
+            //正则验证
+            $('#register input[name="email"]').blur(function() {
+                var pattern = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                var val = $(this).val();
+                if(val != '' && !pattern.test(val)){
+                    $('#register .col').eq(0).css({opacity:1,visibility:'visible'});
+                    flag[0] = false;
+                    setTimeout(function() {
+                        $('#register .col').eq(0).css({opacity:0,visibility:'hidden'});
+                    },3600);
+                }else if(val != '' && pattern.test(val)){
+                    $('#register .col').eq(0).css({opacity:0,visibility:'hidden'});
+                    flag[0] = true;
+                }
+            });
+            $('#register input[name="nick_name"]').blur(function() {
+                var pattern = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                var val = $(this).val();
+                if(val == ''){
+                    $('#register .col').eq(1).css({opacity:1,visibility:'visible'});
+                    flag[1] = false;
+                    setTimeout(function() {
+                        $('#register .col').eq(1).css({opacity:0,visibility:'hidden'});
+                    },3600);
+                }else if(val != ''){
+                    $('#register .col').eq(1).css({opacity:0,visibility:'hidden'});
+                    flag[1] = true;
+                }
+            });
+            $('#register input[name="password1"]').blur(function() {
+                var pattern = /^\S{6,}$/;
+                var val1 = $(this).val();
+                var val2 = $('#register input[name="password2"]').val();
+                if(flag1 && val1 != val2){
+                    $('#register .col').eq(3).css({opacity:1,visibility:'visible'});
+                    flag[3]=false;
+                    setTimeout(function() {
+                        $('#register .col').eq(3).css({opacity:0,visibility:'hidden'});
+                    },3600);
+                }else if(flag1 && val1 == val2){
+                    $('#register .col').eq(3).css({opacity:0,visibility:'hidden'});
+                    flag[3]=true;
+                }
+                if(val1 != '' && !pattern.test(val1)){
+                    $('#register .col').eq(2).css({opacity:1,visibility:'visible'});
+                    flag[2] = false;
+                    setTimeout(function() {
+                        $('#register .col').eq(2).css({opacity:0,visibility:'hidden'});
+                    },3600);
+                }else if(val1 != '' && pattern.test(val1)){
+                    $('#register .col').eq(2).css({opacity:0,visibility:'hidden'});
+                    flag[2] = true;
+                }
+            });
+            $('#register input[name="password2"]').blur(function() {
+                flag1 = true;
+                var val1 = $('#register input[name="password1"]').val();
+                var val2 = $(this).val();
+                if(val2 != '' && val1 != val2){
+                    $('#register .col').eq(3).css({opacity:1,visibility:'visible'});
+                    flag[3]=false;
+                    setTimeout(function() {
+                        $('#register .col').eq(3).css({opacity:0,visibility:'hidden'});
+                    },3600);
+                }else if(flag1 && val1 == val2){
+                    $('#register .col').eq(3).css({opacity:0,visibility:'hidden'});
+                    flag[3]=true;
+                }
+            });
+
+            $('#register .col').hover(function() {
+                $(this).css({opacity:1,visibility:'visible'});
+            },function() {
+                $(this).css({opacity:0,visibility:'hidden'});
+            });
+
+        });
+    </script>
+
+    <div class="go-top">
+        <ul>
+            <li class="sect"></li>
+            <li class="sect">
+                <div class="er-con">
+                    <div class="er-con-title">
+                        <div class="er-con-col"><a href="javascript:void(0);">爱范儿</a></div>
+                        <div class="er-con-col"><a href="javascript:void(0);">AppSolution</a></div>
+                        <div class="er-con-col"><a href="javascript:void(0);">玩物志</a></div>
+                        <div class="er-con-line"></div>
+                    </div>
+                    <div class="er-con-img">
+                        <div><img src="./image/index/ifanrqrcode.jpg" alt=""><p>关注爱范儿微信号，连接热爱，关注这个时代最好的产品。</p></div>
+                        <div><img src="./image/index/appsoqrcode.jpg" alt=""><p>想让你的手机好用到哭？关注这个号就够了。</p></div>
+                        <div><img src="./image/index/coolbuyqrcode.jpg" alt=""><p>关注玩物志微信号，就是让你乱花钱。</p></div>
+                    </div>
+                </div>
+            </li>
+            <li class="sect" id="sect"></li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $('.er-con-line').css({width:'42px',left:'29px'});
+            $('.er-con-col a').each(function(i) {
+                $(this).mouseover(function() {
+                    $('.er-con-line').animate({width:$(this).width(),left:$(this).position().left},20);
+                    $('.er-con-img div').eq(i).css('z-index','11').siblings().css('z-index','10');
+                })
+            });
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 1000){
+                    $('.go-top').css({opacity:1,visibility:'visible'});
+                }else{
+                    $('.go-top').css({opacity:0,visibility:'hidden'});
+                }
+            });
+            $('#sect').click(function() {
+                var timer = null;
+                var speed = 0;
+                timer = setInterval(function() {
+                    if($(window).scrollTop() == 0){
+                        clearInterval(timer);
+                    }else{
+                        speed = $(window).scrollTop()/40;
+                        $(window).scrollTop($(window).scrollTop()-speed);
+                    }
+                },1);
+            });
+        });
+    </script>
+
+</body>
+</html>

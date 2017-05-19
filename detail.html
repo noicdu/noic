@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/detail/index.css">
+    <link rel="stylesheet" href="css/toyshop/font.css">
+    <script src="./js/jquery-1.7.2.js"></script>
+
+</head>
+<body  id="body">
+    <!--头部开始-->
+    <header>
+        <nav id="nav-bar" class="nav bar">
+            <div class="nav-container">
+                <a class="brand"  href="javascript:void(0);">
+                    <img class="logo" src="./image/toyshop/ffd.png" alt="ifanrin logo">
+                    <span class="text-logo" >玩物店</span>
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <label class="search">
+                            <i class="icon-search01"></i>
+                            <input class="input-search" type="search" placeholder="搜索商品...">
+                        </label>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item" href="javascript:void(0);" >联系客服</a>
+                    </li>
+                    <li class="nav-item" >
+                        <div class="popover-container" >
+                            <div id="js-popover" class="popover">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">微信公众号</h3>
+                                <div class="popover-content">
+                                    <section class="popover-container" >
+                                        <img class="text-image" src="./image/toyshop/67b951e7.png" alt="玩物志 logo" >
+                                        <h2>玩物志</h2>
+                                        <img class="text-image-last" src="./image/toyshop/bff8729f.jpg" alt="玩物志公众号">
+                                        <p>手机扫描二维码关注我们</p>
+                                    </section>
+                                </div>
+                            </div>
+                                <span>
+                                    <a class="item" href="javascript:void(0);" id="js-item">关注我们</a>
+                                </span>
+                        </div>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item" href="./shoplogin.html">登录</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="button-dark button" href="javascript:void(0);">
+                            <i class="icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if($(window).scrollTop() > 10){
+                    $('#nav-bar').css({backgroundColor:'#f2f2f2'})
+                            .find('.nav-container').css('width','100%')
+                            .find('.brand').css({width:'55px',height:'55px'})
+                            .find('.text-logo').css({color:'#2b2b2b',right:'-70px',top:'20px',fontSize:'15px'})
+                            .end()
+                            .end()
+                            .find('.nav-list').css({lineHeight:'55px'});
+                }else if($(window).scrollTop() <= 10){
+                    $('#nav-bar').css({backgroundColor:'transparent'})
+                            .find('.nav-container').css('width','948px')
+                            .find('.brand').css({width:'80px',height:'80px'})
+                            .find('.text-logo').css({color:'#fff',right:'22px',top:'46px',fontSize:'12px'})
+                            .end()
+                            .end()
+                            .find('.nav-list').css({lineHeight:'55px'});
+                }
+            });
+            $('#js-item').hover(function() {
+                $('#js-popover').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popover').css({opacity:0,visibility:'hidden'});
+            });
+            $('#js-popover').hover(function() {
+                $('#js-popover').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popover').css({opacity:0,visibility:'hidden'});
+            });
+        });
+    </script>
+    <!--头部结束-->
+
+    <main>
+        <div class="product-detail">
+            <div class="product-header">
+                <div class="pull-left col-slide">
+                    <div class="product-slide">
+                        <div class="swiper-container" id="swiper-container">
+                            <div class="swiper-wrapper" id="js-swiper-wrapper">
+                                <div class="swiper-slide background-image"></div>
+                                <div class="swiper-slide background-image"></div>
+                                <div class="swiper-slide background-image"></div>
+                                <div class="swiper-slide background-image"></div>
+                                <div class="swiper-slide background-image"></div>
+                                <div class="swiper-slide background-image"></div>
+                            </div>
+                            <div id="cover"></div>
+                            <div id="flag" class="flag"></div>
+                        </div>
+                        <div class="swiper-pagination" id="js-swiper-pagination">
+                            <div class="bullet swiper-pagination-bullet active">
+                                <div class="bullet-slide"></div>
+                            </div>
+                            <div class="bullet swiper-pagination-bullet">
+                                <div class="bullet-slide"></div>
+                            </div>
+                            <div class="bullet swiper-pagination-bullet">
+                                <div class="bullet-slide"></div>
+                            </div>
+                            <div class="bullet swiper-pagination-bullet">
+                                <div class="bullet-slide"></div>
+                            </div>
+                            <div class="bullet swiper-pagination-bullet">
+                                <div class="bullet-slide"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 class="product-name">「INTERFOOL」中性尼龙军事背包</h1>
+                    <p class="product-price">599.00</p>
+                    <div class="product-summary">
+                        <span class="icon icon-yinhao"></span>
+                        <span class="text">高强度尼龙牛津耐磨布料 | 多用性袋口，便于归纳 | 底部多用挂扣</span>
+                    </div>
+                    <div class="sku-list">
+                        <div class="spec">
+                            <div class="sku-name">颜色</div>
+                            <div class="sku-item">
+                                <button class="button button-inline-block">黑色</button>
+                                <button class="button button-inline-block">军绿色</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quantity-label"> 数量：
+                        <div class="number-select">
+                            <button class="button button-clear">
+                                <i class="icon icon-iconfontminus"></i>
+                            </button>
+                            <span class="calc-text" id="calc-text">1</span>
+                            <button class="button button-clear button-light">
+                                <i class="icon icon-iconfontjiahao"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <button class="button button-red button-inline-block">马上购买</button>
+                        <button class="button button-pink button-inline-block">加入购物车</button>
+                    </div>
+                    <div class="share-toolbar">
+                        <span class="text-middle">分享：</span>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a class="item share-weibo" href="javascript:void(0);">
+                                    <i class="icon icon-weibo"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="popover-container">
+                                    <div id="js-popo" class="popover bottom">
+                                        <div class="arrow"></div>
+                                        <h3 class="popover-title">扫描下方二维码分享朋友圈</h3>
+                                        <div class="popover-content">
+                                            <section class="popover-container">
+                                                <p class="qrcode">
+                                                    <img src="./image/detail/weixin.gif" width="98" height="98">
+                                                </p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <span id="js-icon-weixin">
+                                        <a href="javacript:void(0);" class="item share-wechat">
+                                            <i class="icon icon-weixin"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="text-middle">喜欢：</span>
+                        <button class="button button-outline" id="button-like">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">4</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="big-img">
+                    <img src="./image/detail/1.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-body">
+                <h2 class="text-headline"> <span> 细节描述 </span> </h2>
+                <div class="row">
+                    <section class="desktop-description">
+                        <p>【品牌介绍】<br></p>
+                        <p>INTERFOOL 品牌是与 OPERATIONS 设计师团队共同创立的品牌，由香港与韩国日本设计师共同设计，打造出多元化的风格。最早的 INTERFOOL 是在日本韩国起家的，因为受日韩文化影响，INTERFOOL 的产品不管在包装还是设计元素上，都更加大胆。</p>
+                        <p>INTERFOOL 品牌走在潮流的前端，深受潮人们的喜爱，在日本、韩国、香港、泰国、新加坡、马来西亚都是广大顾客的宠儿，各地专卖店上都备受热棒。</p>
+                        <p><img src="./image/detail/shop-1.jpg"></p>
+                        <p><img src="./image/detail/shop-2.jpg"></p>
+                        <p>【产品介绍】</p>
+                        <p><img src="./image/detail/shop-3.jpg"><img src="./image/detail/shop-4.jpg"></p>
+                        <p>【产品材质】</p>
+                        <p><img src="./image/detail/shop-5.jpg"></p>
+                        <p>【产品细节】</p>
+                        <p><img src="./image/detail/shop-6.jpg"></p>
+                        <p><img src="./image/detail/shop-7.jpg"></p>
+                        <p><img src="./image/detail/shop-8.jpg"></p>
+                        <p>【产品展示】</p>
+                        <p><img src="./image/detail/shop-9.jpg"><img src="./image/detail/shop-10.jpg"></p>
+                        <p><span style="color: rgb(255, 0, 0);">快递：申通，周一到周六，16:00 点截单，广州发出</span></p>
+                        <p style="white-space: normal;">*售前须知：</p>
+                        <p style="white-space: normal;">·节假日只接单，不发货，所有订单将会尽快安排发放；</p>
+                        <p style="white-space: normal;">·售后受理时间为，工作日 9:00 - 18:00</p>
+                        <p style="white-space: normal;">·关于色差</p>
+                        <p style="white-space: normal;">本店所有产品图片均为厂商提供，由于各个显示器不同，会有少许色差，介意者慎拍。</p>
+                        <p><br></p>
+                    </section>
+                    <section class="slide">
+                        <div class="panel-vendor">
+                            <div class="panel-vendor-header">品牌故事</div>
+                            <div class="panel-vendor-body">
+                                <div class="picture background-image"></div>
+                                <h3 class="name">INTERFOOL</h3>
+                                <p class="desc">INTERFOOL品牌是与OPERATIONS设计师团队共同创立的品牌，香港与韩国日本设 计师共同设计，打造出多元化的风格。最早的INTERFOOL是在日本韩国起家的，因 为受日韩文化影响，INTERFOOL的产品不管在包装还是设计元素上，都更加大胆。 INTERFOOL品牌走在潮流的前端，深受潮人们的喜爱，在日本、韩国、香港、泰国、 新加坡、马来西亚都是广大顾客的宠儿，各地专卖店上都备受热棒！</p>
+                            </div>
+                        </div>
+                        <div class="desc-panel">
+                            <h3 class="desc-header">
+                                <i class="icon icon-canshu"></i>
+                                <span class="text-middle">规格参数</span>
+                            </h3>
+                            <div class="desc-body">
+                                <div class="spec-list">
+                                    <div class="item">
+                                        <span class="key">品牌</span>
+                                        <span class="value">INTERFOOL</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="key">品名</span>
+                                        <span class="value">中性尼龙军事背包</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="key">颜色</span>
+                                        <span class="value">军绿色 / 黑色</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="key">规格大小</span>
+                                        <span class="value">高 50 CM； 宽 30 CM ；深 22 CM</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="key">材质</span>
+                                        <span class="value">尼龙</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desc-panel">
+                            <h3 class="desc-header">
+                                <i class="icon text-middle icon-return"></i>
+                                <span class="text-middle">关于退换货</span>
+                            </h3>
+                            <div class="desc-body">
+                                <h3 class="content-headline">七天无理由退换货</h3>
+                                <p class="content-part"> 自顾客收到商品之日起（以签收日期为准）7 天内。退换商品满足以下全部条件，可享受退换货服务： </p>
+                                <ol class="content-ol">
+                                    <li>须为原厂原装产品且配件齐全，无包装破损及二次封箱情况；</li>
+                                    <li>产品包装无运输或储存过程中造成的严重变形或污渍、损坏情况；</li>
+                                    <li>不影响再次销售；</li> <li>食品类及定制类商品不享受 7 天无理由退换货。</li>
+                                </ol>
+                                <p></p>
+                                <h3 class="content-headline">退换货须知</h3>
+                                <p class="content-part"> </p>
+                                <ol class="content-ol">
+                                    <li>按国家三包规定及厂商具体政策向消费者提供售后服务；</li>
+                                    <li>请在退货前的 48 小时内，于商品订单页面中申请退货；</li>
+                                    <li>按页面要求，填写相关信息，并核实是否符合退换货条件，客服将对退换货申请进行审核，信息符实的申请将予以通过；</li>
+                                    <li>如果商品存在质量问题，请务必在申请退货时，提供相关质量问题图片及相关文字说明。</li>
+                                </ol>
+                                <p></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-panel zoom-transition">
+            <div class="modal-header">
+                <div class="message">你已经点过赞了</div>
+            </div>
+            <div class="modal-footer">
+                <button class="button button-full button-cancel" id="button-cancel"> 确定 </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var flag = true;
+            var flag1 = true;
+            var flag2 = true;
+            var timer = null;
+            var a = 0;
+            var b = 0;
+            var index = 0;
+            var c = 0;
+            $('.button-outline').toggle(function() {
+                $('.icon-heart').eq($(this).index('.button-outline')).css('color','#f8504f');
+                if(flag){
+                    var num = $('.number').eq($(this).index('.button-outline')).text();
+                    $('.number').eq($(this).index('.button-outline')).text(parseInt(num) + 1);
+                }
+                $('#modal').css({opacity:1,visibility:'visible'});
+            },function() {
+                flag = false;
+                $('#modal').css({opacity:1,visibility:'visible'});
+            });
+            $('#button-cancel').click(function() {
+                $('#modal').css({opacity:0,visibility:'hidden'});
+            })
+
+            $('#js-icon-weixin').hover(function() {
+                $('#js-popo').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popo').css({opacity:0,visibility:'hidden'});
+            });
+            $('#js-popo').hover(function() {
+                $('#js-popo').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popo').css({opacity:0,visibility:'hidden'});
+            });
+
+            $('.sku-item .button').eq(0).click(function() {
+                if(flag1){
+                    flag1 = false;
+                    flag2 = true;
+                    $(this).addClass('active').siblings().removeClass('active');
+                }else{
+                    flag1 = true;
+                    $('.sku-item .button').removeClass('active');
+                }
+            });
+            $('.sku-item .button').eq(1).click(function() {
+                if(flag2){
+                    flag1 = true;
+                    flag2 = false;
+                    $(this).addClass('active').siblings().removeClass('active');
+                }else{
+                    flag2 = true;
+                    $('.sku-item .button').removeClass('active');
+                }
+            });
+
+            $('.number-select .button').eq(0).click(function() {
+                var num = parseInt($('#calc-text').html());
+                if(num <= 1){
+                    $('#calc-text').html();
+                }else{
+                    num -= 1;
+                    $('#calc-text').html(num);
+                }
+            });
+            $('.number-select .button').eq(1).click(function() {
+                var num = parseInt($('#calc-text').html());
+                if(num >= 99){
+                    $('#calc-text').html(99);
+                }else{
+                    num += 1;
+                    $('#calc-text').html(num);
+                }
+            });
+
+
+            //轮播图
+            timer = setInterval(funI,1000);
+            function funI() {
+                a -= 520;
+                b++;
+                $('#js-swiper-wrapper').animate({left:a},400);
+                $('#js-swiper-pagination .bullet').removeClass('active');
+                $('#js-swiper-pagination .bullet').eq(b).addClass('active');
+                if(b == 4){
+                    b=-1;
+                }
+                if(a == -2600){
+                    a = 0;
+                    $('#js-swiper-wrapper').animate({left:a},0);
+                }
+            }
+
+            $('#js-swiper-pagination .bullet').hover(function() {
+                clearInterval(timer);
+                if(!$('#js-swiper-wrapper').is(":animated")) {
+                    index = $(this).index();
+                    b = index - 1;
+                    a = -520 * b;
+                    funI();
+                }
+            },function() {
+                clearInterval(timer);
+                timer = setInterval(funI,1000);
+            });
+            /*$('#js-swiper-wrapper').hover(function(e) {
+                clearInterval(timer);
+            },function() {
+                clearInterval(timer);
+                timer = setInterval(funI,1000);
+            });*/
+
+
+            //放大镜
+            $('#cover').mousemove(function(e) {
+                clearInterval(timer);
+                var mouseX = e.offsetX;
+                var mouseY = e.offsetY;
+
+                $('#flag').css('left',''+(mouseX - $('#flag').outerWidth()/2)+'px');
+                $('#flag').css('top',''+(mouseY - $('#flag').outerHeight()/2)+'px');
+                //右边检测
+                $('#flag').css('left',''+(parseInt($('#flag').css('left')) > ($('#swiper-container').outerWidth() - $('#flag').outerWidth()) ? ($('#swiper-container').outerWidth() - $('#flag').outerWidth()) + 'px' : $('#flag').css('left'))+'');
+                $('#flag').css('left',''+(parseInt($('#flag').css('left')) < 0 ? 0 + 'px' : $('#flag').css('left'))+'');
+                $('#flag').css('top',''+(parseInt($('#flag').css('top')) < 0 ? 0 + 'px' : $('#flag').css('top'))+'');
+                $('#flag').css('top',''+(parseInt($('#flag').css('top')) > ($('#swiper-container').outerHeight() - $('#flag').outerHeight()) ? ($('#swiper-container').outerHeight() - $('#flag').outerHeight()) + 'px' : $('#flag').css('top'))+'');
+
+                $('.big-img img').css('left',''+(-2*parseInt($('#flag').css('left')))+'px')
+                $('.big-img img').css('top',''+(-2*parseInt($('#flag').css('top')))+'px')
+                c = b;
+                if(c != -1){
+                    c++;
+                    $('.big-img img').attr('src','./image/detail/'+c+'.jpg');
+                }else if(c == -1){
+                    c = 5;
+                    $('.big-img img').attr('src','./image/detail/'+c+'.jpg');
+                }
+            }).mouseout(function() {
+                clearInterval(timer);
+                $('.big-img').css({opacity:0,visibility:'hidden'});
+                $('#flag').css({opacity:0,visibility:'hidden'});
+                timer = setInterval(funI,1000);
+            }).mouseover(function() {
+                clearInterval(timer);
+                $('.big-img').css({opacity:1,visibility:'visible'});
+                $('#flag').css({opacity:0.5,visibility:'visible'});
+            });
+        });
+    </script>
+
+    <!--底部开始-->
+    <footer>
+        <div class="description-container" >
+            <div class="grid" >
+                <div class="col" >
+                    <span class="text-chinese" >全球尖货</span>
+                    <span class="text-english" >Global selection</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/6978ccb2.png" alt="全球尖货" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >正品保证</span>
+                    <span class="text-english" >Authenticity guaranteed</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/ad6f3109.png" alt="正品保证" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >全场包邮</span>
+                    <span class="text-english" >Free Shipping</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/68f7824e.png" alt="全场包邮" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >7 天无理由退换</span>
+                    <span class="text-english" >Free Refund In 7 Days</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/9a5c0d31.png" alt="7 天无理由退换" >
+                </div>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <div class="full-container">
+                <p class="logo-container">
+                    <img class="logo" src="https://mcache.ifanr.cn/static/dongguan/dist/images/ffd04740.png" alt="logo" >
+                    <span class="text-logo" >IFANR.IN</span>
+                </p>
+                <ul class="link-list" >
+                    <li class="nav-item first" >
+                        <a class="item"  href="javascript:void(0);">购物指南</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item"  href="javascript:void(0);">商务合作</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item"  href="javascript:void(0);">关于我们</a>
+                    </li>
+                </ul>
+                <ul class="button-list" >
+                    <li class="nav-item" >
+                        <div class="popover-container">
+                            <div class="popover fade-fast-transition top">
+                                <div class="arrow"></div>
+                                <div class="popover-content">
+                                    <section class="popover-container" >
+                                        <img class="popover-qrcode" src="https://mcache.ifanr.cn/static/dongguan/dist/images/bff8729f.jpg" alt="微信二维码" >
+                                        <p class="tip" >扫描二维码关注我们</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <span>
+                                <a href="javascript:void(0);" class="item-wechat" >
+                                    <i class="icon-weixin icon" ></i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="javascript:void(0);" class="item-weibo" >
+                            <i class="icon-weibo icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item last" >
+                        <div class="popover-container"  >
+                            <div class="popover fade-fast-transition top">
+                                <div class="arrow" ></div>
+                                <div class="popover-content" >
+                                    <section class="popover-container" >
+                                        <img class="popover-qrcode" src="https://mcache.ifanr.cn/static/dongguan/dist/images/9995d61a.png" alt="移动版二维码" >
+                                        <p class="tip" >扫描二维码进入移动版</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <span >
+                                <a href="javascript:void(0);" class="item-phone" >
+                                    <i class="icon-phone icon"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <p class="copyright" >Copyright © 2008 - 2017 ifanr Inc, all rights reserved. <br >
+                    <a href="http://www.miitbeian.gov.cn" >粤 ICP 备 10211557 号</a>
+                </p>
+            </div>
+        </div>
+        <div class="go-top">
+            <ul class="list">
+                <li class="nav-item">
+                    <a class="link" id="link-up" href="javascript:void(0);">
+                        <i class="icon icon-up"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link service" href="javascript:void(0);">
+                        <i class="icon icon-kefu"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link last" href="javascript:void(0);">
+                        <i class="icon icon-qrcode"></i>
+                    </a>
+                    <div class="panel panel-wechat">
+                        <img class="image" src="https://mcache.ifanr.cn/static/dongguan/dist/images/bff8729f.jpg" alt="玩物志微信二维码">
+                        <div class="block">
+                            <div class="name">玩物志</div>
+                            <p class="part">微信扫描二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        $(function() {
+            var flag = false;
+
+            $('#link-up').click(function() {
+                var timer = null;
+                var speed = 0;
+                timer = setInterval(function() {
+                    if($(window).scrollTop() == 0){
+                        clearInterval(timer);
+                    }else{
+                        flag = true;
+                        speed = $(window).scrollTop()/40;
+                        $(window).scrollTop($(window).scrollTop()-speed);
+                    }
+                },1);
+            });
+
+        })
+
+    </script>
+    <!--底部结束-->
+</body>
+</html>

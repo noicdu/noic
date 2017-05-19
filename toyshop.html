@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/toyshop/index.css">
+    <link rel="stylesheet" href="css/toyshop/font.css">
+    <script src="./js/jquery-1.7.2.js"></script>
+</head>
+<body id="body">
+    <!--头部开始-->
+    <header>
+        <nav id="nav-bar" class="nav bar">
+            <div class="nav-container">
+                <a class="brand"  href="javascript:void(0);">
+                    <img class="logo" src="./image/toyshop/ffd.png" alt="ifanrin logo">
+                    <span class="text-logo" >玩物店</span>
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <label class="search">
+                            <i class="icon-search01"></i>
+                            <input class="input-search" type="search" placeholder="搜索商品...">
+                        </label>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item" href="javascript:void(0);" >联系客服</a>
+                    </li>
+                    <li class="nav-item" >
+                        <div class="popover-container" >
+                            <div id="js-popover" class="popover">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">微信公众号</h3>
+                                <div class="popover-content">
+                                    <section class="popover-container" >
+                                        <img class="text-image" src="./image/toyshop/67b951e7.png" alt="玩物志 logo" >
+                                        <h2>玩物志</h2>
+                                        <img class="text-image-last" src="./image/toyshop/bff8729f.jpg" alt="玩物志公众号">
+                                        <p>手机扫描二维码关注我们</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <span>
+                                <a class="item" href="javascript:void(0);" id="js-item">关注我们</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item" href="./shoplogin.html">登录</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="button-dark button" href="javascript:void(0);">
+                            <i class="icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if($(window).scrollTop() > 10){
+                    $('#nav-bar').css({backgroundColor:'#f2f2f2'})
+                            .find('.nav-container').css('width','100%')
+                            .find('.brand').css({width:'55px',height:'55px'})
+                            .find('.text-logo').css({color:'#2b2b2b',right:'-70px',top:'20px',fontSize:'15px'})
+                            .end()
+                            .end()
+                            .find('.nav-list').css({lineHeight:'55px'});
+                }else if($(window).scrollTop() <= 10){
+                    $('#nav-bar').css({backgroundColor:'transparent'})
+                            .find('.nav-container').css('width','948px')
+                            .find('.brand').css({width:'80px',height:'80px'})
+                            .find('.text-logo').css({color:'#fff',right:'22px',top:'46px',fontSize:'12px'})
+                            .end()
+                            .end()
+                            .find('.nav-list').css({lineHeight:'55px'});
+                }
+            });
+            $('#js-item').hover(function() {
+                $('#js-popover').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popover').css({opacity:0,visibility:'hidden'});
+            });
+            $('#js-popover').hover(function() {
+                $('#js-popover').css({opacity:1,visibility:'visible'});
+            },function() {
+                $('#js-popover').css({opacity:0,visibility:'hidden'});
+            });
+        });
+    </script>
+    <!--头部结束-->
+
+    <!--内容开始-->
+    <main>
+        <div class="slide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="js-swiper-wrapper">
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                </div>
+
+            </div>
+            <div class="swiper-pagination" id="js-swiper-pagination">
+                <div class="bullet">
+                    <i class="icon-view icon"></i>
+                    <div class="bullet-slide"></div>
+                </div>
+                <div class="bullet">
+                    <i class="icon-view icon"></i>
+                    <div class="bullet-slide"></div>
+                </div>
+                <div class="bullet">
+                    <i class="icon-view icon"></i>
+                    <div class="bullet-slide"></div>
+                </div>
+                <div class="bullet">
+                    <i class="icon-view icon"></i>
+                    <div class="bullet-slide"></div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav-list" id="js-nav-list">
+            <li class="nav-item" >
+                <i class="icon-list icon" ></i>
+            </li>
+            <li class="nav-item" >
+                <a href="javascript:void(0);" class="item active" >默认</a>
+            </li>
+            <li class="nav-item" >
+                <a href="javascript:void(0);" class="item" >最新</a>
+            </li>
+            <li class="nav-item" >
+                <a href="javascript:void(0);" class="item" >最热</a>
+            </li>
+            <li class="nav-item pull-right" >
+                <a class="button button-all"  href="javascript:void(0);">查看全部</a>
+            </li>
+        </ul>
+        <div class="nav-shelf" id="js-nav-shelf">
+            <div id="js-swiper-container" class="swiper-container" >
+                <div class="swiper-wrapper" id="js-swiper-slide">
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >睡眠专场</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >新品上架</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >包治百病</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >潮表精选</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >数码周边</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >风骚小物</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >家居百货</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >文房四宝</span>
+                    </a>
+                    <a class="swiper-slide" href="javascript:void(0);"  style="width:127.714px;">
+                        <span class="slide-text" >味蕾培养</span>
+                    </a>
+                </div>
+            </div>
+            <div id="s-but-right" class="swiper-button" >&gt;</div>
+            <div id="s-but-left" class="swiper-button s-button" >&lt;</div>
+        </div>
+        <div class="feature-list">
+            <div class="row-1">
+                <a href="./detail.html" class="product">
+                    <i class="icon icon-view"></i>
+                    <div class="thumbnail background-image"></div>
+                    <div class="product-info" >
+                        <p class="name" >「INTERFOOL」中性尼龙军事背包</p>
+                        <span class="text-price" >599.00</span>
+                        <span class="original-price text-price" >599.00</span>
+                        <ul class="extra-info" >
+                            <li class="item" >颜色：黑色 / 军绿色</li>
+                        </ul>
+                        <button class="button button-outline">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">4</span>
+                        </button>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="product">
+                    <i class="icon icon-view"></i>
+                    <div class="thumbnail background-image"></div>
+                    <div class="product-info">
+                        <p class="name">「Pluto」家庭音响新物种</p>
+                        <span class="text-price">35,800.00</span>
+                        <span class="original-price text-price">35,800.00</span>
+                        <ul class="extra-info">
+                            <li class="item">颜色：红色 / 白色</li>
+                        </ul>
+                        <button class="button button-outline button-like normal">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">23</span>
+                        </button>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="product">
+                    <i class="icon icon-view"></i>
+                    <div class="thumbnail background-image"></div>
+                    <div class="product-info">
+                        <p class="name">「imblu」洗漱包大号</p>
+                        <span class="text-price">129.00</span>
+                        <span class="original-price text-price">129.00</span>
+                        <ul class="extra-info">
+                            <li class="item">颜色：深海蓝 / 薄荷青 / 樱花粉 / 太空灰</li>
+                        </ul>
+                        <button class="button button-outline button-like normal">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">40</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+            <div class="row-2">
+                <a href="javascript:void(0);" class="product col">
+                    <i class="icon icon-view"></i>
+                    <div class="thumbnail background-image"></div>
+                    <div class="product-info">
+                        <p class="name">「Pluto」家庭音响新物种</p>
+                        <span class="text-price">35,800.00</span>
+                        <span class="original-price text-price">35,800.00</span>
+                        <ul class="extra-info">
+                            <li class="item">颜色：红色 / 白色</li>
+                        </ul>
+                        <button class="button button-outline button-like normal">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">23</span>
+                        </button>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="product col">
+                    <i class="icon icon-view"></i>
+                    <div class="thumbnail background-image"></div>
+                    <div class="product-info">
+                        <p class="name">「Pluto」家庭音响新物种</p>
+                        <span class="text-price">35,800.00</span>
+                        <span class="original-price text-price">35,800.00</span>
+                        <ul class="extra-info">
+                            <li class="item">颜色：红色 / 白色</li>
+                        </ul>
+                        <button class="button button-outline button-like normal">
+                            <i class="icon icon-heart"></i>
+                            <span class="button-text number">23</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row-3">
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info" >
+                    <p class="name" >「INTERFOOL」中性尼龙军事背包</p>
+                    <span class="text-price" >599.00</span>
+                    <span class="original-price text-price" >599.00</span>
+                    <ul class="extra-info" >
+                        <li class="item" >颜色：黑色 / 军绿色</li>
+                    </ul>
+                    <button class="button button-outline">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">4</span>
+                    </button>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info">
+                    <p class="name">「Pluto」家庭音响新物种</p>
+                    <span class="text-price">35,800.00</span>
+                    <span class="original-price text-price">35,800.00</span>
+                    <ul class="extra-info">
+                        <li class="item">颜色：红色 / 白色</li>
+                    </ul>
+                    <button class="button button-outline button-like normal">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">23</span>
+                    </button>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info">
+                    <p class="name">「imblu」洗漱包大号</p>
+                    <span class="text-price">129.00</span>
+                    <span class="original-price text-price">129.00</span>
+                    <ul class="extra-info">
+                        <li class="item">颜色：深海蓝 / 薄荷青 / 樱花粉 / 太空灰</li>
+                    </ul>
+                    <button class="button button-outline button-like normal">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">40</span>
+                    </button>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info" >
+                    <p class="name" >「INTERFOOL」中性尼龙军事背包</p>
+                    <span class="text-price" >599.00</span>
+                    <span class="original-price text-price" >599.00</span>
+                    <ul class="extra-info" >
+                        <li class="item" >颜色：黑色 / 军绿色</li>
+                    </ul>
+                    <button class="button button-outline">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">4</span>
+                    </button>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info">
+                    <p class="name">「Pluto」家庭音响新物种</p>
+                    <span class="text-price">35,800.00</span>
+                    <span class="original-price text-price">35,800.00</span>
+                    <ul class="extra-info">
+                        <li class="item">颜色：红色 / 白色</li>
+                    </ul>
+                    <button class="button button-outline button-like normal">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">23</span>
+                    </button>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="product">
+                <i class="icon icon-view"></i>
+                <div class="thumbnail background-image"></div>
+                <div class="product-info">
+                    <p class="name">「imblu」洗漱包大号</p>
+                    <span class="text-price">129.00</span>
+                    <span class="original-price text-price">129.00</span>
+                    <ul class="extra-info">
+                        <li class="item">颜色：深海蓝 / 薄荷青 / 樱花粉 / 太空灰</li>
+                    </ul>
+                    <button class="button button-outline button-like normal">
+                        <i class="icon icon-heart"></i>
+                        <span class="button-text number">40</span>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-panel zoom-transition">
+            <div class="modal-header">
+                <div class="message">你已经点过赞了</div>
+            </div>
+            <div class="modal-footer">
+                <button class="button button-full button-cancel" id="button-cancel"> 确定 </button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(function() {
+            var timer = null;
+            var Left = 0;
+            var num = 0;
+            var a = 0;
+            var speed = 0;
+            $('#js-swiper-pagination .icon-view').eq(num).css({opacity:1});
+            $('#js-swiper-pagination .bullet-slide').eq(num).addClass('slide-bg');
+            timer = setInterval(jsImg,3000);
+            function jsImg() {
+                Left -= 730;
+                num += 1;
+                $('#js-swiper-wrapper').animate({left:Left},500);
+                $('#js-swiper-pagination .icon-view').css({opacity:0});
+                $('#js-swiper-pagination .bullet-slide').removeClass('slide-bg');
+                $('#js-swiper-pagination .icon-view').eq(num).css({opacity:1});
+                $('#js-swiper-pagination .bullet-slide').eq(num).addClass('slide-bg');
+                if(Left == -2920){
+                    Left = 0;
+                    $('#js-swiper-wrapper').animate({left:Left},0);
+                }else if(Left == -2190){
+                    num = -1;
+                }
+            }
+            $('#js-swiper-pagination .bullet').each(function(i) {
+                $(this).click(function() {
+                    clearInterval(timer);
+                    if(!$('#js-swiper-wrapper').is(":animated")){
+                        num = i - 1;
+                        Left = -730*(i - 1);
+                        jsImg();
+                    }
+                });
+                $(this).hover(function() {
+                    clearInterval(timer);
+                    timer = null;
+                },function() {
+                    clearInterval(timer);
+                    timer = null;
+                    timer = setInterval(jsImg,3000);
+                })
+            });
+
+            $('#js-nav-list .item').hover(function() {
+                $(this).addClass('active');
+            },function() {
+                $('#js-nav-list .item:not(:eq('+a+'))').removeClass('active');
+            });
+            $('#js-nav-list .item').click(function() {
+                a = $(this).index('#js-nav-list .item');
+                $('#js-nav-list .item:not(:eq('+a+'))').removeClass('active');
+                $('#js-swiper-slide .swiper-slide').removeClass('swiper-slide2').children('span').removeClass('slide-text2');
+            });
+
+            $('#js-swiper-slide .swiper-slide').click(function() {
+                $('#js-swiper-slide .swiper-slide').removeClass('swiper-slide2').children('span').removeClass('slide-text2');
+                $(this).addClass('swiper-slide2');
+                $(this).children('span').addClass('slide-text2');
+                $('#js-nav-list .item').removeClass('active');
+            });
+
+            $('#s-but-left').click(function() {
+                if(!$('#js-swiper-slide').is(":animated")){
+                    speed += 127.7;
+                    $('#s-but-right').removeClass('s-button');
+                    $('#js-swiper-slide').animate({left:speed},400);
+                    if($('#js-swiper-slide').position().left > -128){
+                        $('#s-but-left').addClass('s-button');
+                    }
+                }
+
+            });
+            $('#s-but-right').click(function() {
+                if(!$('#js-swiper-slide').is(":animated")) {
+                    speed -= 127.7;
+                    $('#s-but-left').removeClass('s-button');
+                    $('#js-swiper-slide').animate({left:speed},400);
+                    if($('#js-swiper-slide').position().left <= -127){
+                        $('#s-but-right').addClass('s-button');
+                    }
+                }
+
+            });
+            $('.background-image').each(function(i) {
+//                console.log(i%3);
+                $('.background-image').eq(i).css('backgroundImage','url(./image/toyshop/shop'+(i%3+1)+'.jpg)');
+            });
+
+            var flag = true;
+            $('.button-outline').toggle(function() {
+                $('.icon-heart').eq($(this).index('.button-outline')).css('color','#f8504f');
+                if(flag){
+                    var num = $('.number').eq($(this).index('.button-outline')).text();
+                    $('.number').eq($(this).index('.button-outline')).text(parseInt(num) + 1);
+                }
+                $('#modal').css({opacity:1,visibility:'visible'});
+            },function() {
+                flag = false;
+                $('#modal').css({opacity:1,visibility:'visible'});
+            });
+            $('#button-cancel').click(function() {
+                $('#modal').css({opacity:0,visibility:'hidden'});
+            })
+        });
+
+    </script>
+    <!--内容结束-->
+
+    <!--底部开始-->
+    <footer>
+        <div class="description-container" >
+            <div class="grid" >
+                <div class="col" >
+                    <span class="text-chinese" >全球尖货</span>
+                    <span class="text-english" >Global selection</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/6978ccb2.png" alt="全球尖货" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >正品保证</span>
+                    <span class="text-english" >Authenticity guaranteed</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/ad6f3109.png" alt="正品保证" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >全场包邮</span>
+                    <span class="text-english" >Free Shipping</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/68f7824e.png" alt="全场包邮" >
+                </div>
+                <div class="col" >
+                    <span class="text-chinese" >7 天无理由退换</span>
+                    <span class="text-english" >Free Refund In 7 Days</span>
+                    <img class="picture" src="https://mcache.ifanr.cn/static/dongguan/dist/images/9a5c0d31.png" alt="7 天无理由退换" >
+                </div>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <div class="full-container">
+                <p class="logo-container">
+                    <img class="logo" src="https://mcache.ifanr.cn/static/dongguan/dist/images/ffd04740.png" alt="logo" >
+                    <span class="text-logo" >IFANR.IN</span>
+                </p>
+                <ul class="link-list" >
+                    <li class="nav-item first" >
+                        <a class="item"  href="javascript:void(0);">购物指南</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item"  href="javascript:void(0);">商务合作</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="item"  href="javascript:void(0);">关于我们</a>
+                    </li>
+                </ul>
+                <ul class="button-list" >
+                    <li class="nav-item" >
+                        <div class="popover-container">
+                            <div class="popover fade-fast-transition top">
+                                <div class="arrow"></div>
+                                <div class="popover-content">
+                                    <section class="popover-container" >
+                                        <img class="popover-qrcode" src="https://mcache.ifanr.cn/static/dongguan/dist/images/bff8729f.jpg" alt="微信二维码" >
+                                        <p class="tip" >扫描二维码关注我们</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <span>
+                                <a href="javascript:void(0);" class="item-wechat" >
+                                    <i class="icon-weixin icon" ></i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="javascript:void(0);" class="item-weibo" >
+                            <i class="icon-weibo icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item last" >
+                        <div class="popover-container"  >
+                            <div class="popover fade-fast-transition top">
+                                <div class="arrow" ></div>
+                                <div class="popover-content" >
+                                    <section class="popover-container" >
+                                        <img class="popover-qrcode" src="https://mcache.ifanr.cn/static/dongguan/dist/images/9995d61a.png" alt="移动版二维码" >
+                                        <p class="tip" >扫描二维码进入移动版</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <span >
+                                <a href="javascript:void(0);" class="item-phone" >
+                                    <i class="icon-phone icon"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <p class="copyright" >Copyright © 2008 - 2017 ifanr Inc, all rights reserved. <br >
+                    <a href="http://www.miitbeian.gov.cn" >粤 ICP 备 10211557 号</a>
+                </p>
+            </div>
+        </div>
+        <div class="go-top">
+            <ul class="list">
+                <li class="nav-item">
+                    <a class="link" id="link-up" href="javascript:void(0);">
+                        <i class="icon icon-up"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link service" href="javascript:void(0);">
+                        <i class="icon icon-kefu"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="link last" href="javascript:void(0);">
+                        <i class="icon icon-qrcode"></i>
+                    </a>
+                    <div class="panel panel-wechat">
+                        <img class="image" src="https://mcache.ifanr.cn/static/dongguan/dist/images/bff8729f.jpg" alt="玩物志微信二维码">
+                        <div class="block">
+                            <div class="name">玩物志</div>
+                            <p class="part">微信扫描二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        $(function() {
+
+            $('#link-up').click(function() {
+                var timer = null;
+                var speed = 0;
+                timer = setInterval(function() {
+                    if($(window).scrollTop() == 0){
+                        clearInterval(timer);
+                    }else{
+                        speed = $(window).scrollTop()/40;
+                        $(window).scrollTop($(window).scrollTop()-speed);
+                    }
+                },1);
+            });
+
+        })
+
+    </script>
+    <!--底部结束-->
+</body>
+</html>

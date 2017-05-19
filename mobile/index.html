@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./js/jquery-1.7.2.js"></script>
+</head>
+<body>
+    <div id="cantainer">
+        <div id="global-nav-overlay" class="global-nav-overlay-container hide"></div>
+        <div class="global-navigator">
+            <div class="nav-title">
+                <a class="nav-logo" href="javascript:void(0);">
+                    <img src="./images/new-logo.png" alt="">
+                </a>
+                <span class="search-button nav-icon"><i class="iconfont search"></i></span>
+
+                <div class="nav-user" id="nav-user">
+                    <div class="js-not-login">
+                        <a rel="nofollow" class="user-login" href="javascript:void(0);" id="sso-login">登录</a>
+                        <a rel="nofollow" class="user-reg" href="javascript:void(0);" id="sso-register">注册</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <div class="nav-items-list">
+                    <div class="single-row">
+                        <a href="./ifanQ.html">
+                            <span>ifanQ</span></a>
+                        <a href="javascript:void(0);">
+                            <span>ifanRank</span></a>
+                        <a href="javascript:void(0);">
+                            <span>MindTalk</span></a>
+                    </div>
+                    <div class="single-row">
+                        <a href="javascript:void(0);">
+                            <span>产品</span></a>
+                        <a href="javascript:void(0);">
+                            <span>人物</span></a>
+                        <a href="javascript:void(0);">
+                            <span>公司</span></a>
+                    </div>
+                    <div class="single-row">
+                        <a href="javascript:void(0);">
+                            <span>图记</span></a>
+                        <a href="javascript:void(0);">
+                            <span>新创</span></a>
+                        <a href="javascript:void(0);">
+                            <span>早报</span></a>
+                    </div>
+                    <div class="single-row">
+                        <a href="javascript:void(0);">
+                            <span>汽车</span></a>
+                        <a href="javascript:void(0);">
+                            <span>游戏</span></a>
+                        <a href="javascript:void(0);">
+                            <span>特稿</span></a>
+                    </div>
+                    <div class="single-row">
+                        <a href="javascript:void(0);">
+                            <span>生活</span></a>
+                        <a href="javascript:void(0);">
+                            <span>范评</span></a>
+                        <a href="javascript:void(0);">
+                            <span>视频</span></a>
+                    </div>
+                    <div class="single-row">
+                        <a href="javascript:void(0);">
+                            <span>评测</span></a>
+                    </div>
+                </div>
+
+                <div class="nav-products">
+                    <a class="product-item" href="javascript:void(0);">
+                        <img class="item-logo" src="./images/appsolution.png" alt="">
+                        <span class="item-name">AppSolution</span>
+                    </a>
+                    <a class="product-item" href="javascript:void(0);">
+                        <img class="item-logo" src="./images/coolbuy.png" alt="">
+                        <span class="item-name">玩物志</span>
+                    </a>
+                    <a class="product-item" href="javascript:void(0);">
+                        <img class="item-logo" src="./images/mindstore-new.png" alt="">
+                        <span class="item-name">MindStore</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="header-nav">
+                <span class="nav-icon menu-button" id="menu-button">
+                    <i class="iconfont menu"></i>
+                </span>
+                <a href="#">
+                    <img class="white-logo" src="./images/new-logo-white.png">
+                </a>
+                <span class="search-button nav-icon">
+                    <i class="iconfont search"></i>
+                </span>
+            </nav>
+            <div class="banner" id="banner">
+                <div class="swipe-wrap" style="">
+                    <div class="news-item" style="background-image: url(./images/1.jpg); width: 320px; left: 0px;">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">公司</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-17 06:48:30</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">【独家】关于 iPhone 8，所有的谜底在此揭晓</h1>
+                                <div class="news-description">
+                                    <p>很多人会说，如果上面都是真的，iPhone 8 技术激进得不像苹果，不过想想初代 iPhone，想想 iPh…</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="news-item" style="background-image: url(./images/2.jpg); width: 320px; left: 320px">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">产品</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-14 16:37:12</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">我们“住”了一回苹果智能家居公寓，发现了 Homekit 的几大真相</h1>
+                                <div class="news-description"><p>单卖消费者嫌贵的话，先打包给开发商做精装修，或许会是另一种可能…</p></div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="news-item" style="background-image: url(./images/3.jpg); width: 320px; left: 640px;">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">公司</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-12 17:20:00</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">独家爆料！支付宝的小程序功能下周发布，将和生活圈绑定</h1>
+                                <div class="news-description"><p>微信和支付宝，一个在进攻，一个在反击。</p></div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="news-item" style="background-image: url(./images/4.jpg); width: 320px; left: 960px;">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">公司</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-11 15:45:03</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">美联航以“超售”为由驱客，愤怒之外，这些自我保护的知识你得知道</h1>
+                                <div class="news-description"><p>愤怒之外，我们也必须了解这些保护自我权益的知识…</p></div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="news-item" style="background-image: url(./images/5.jpg); width: 320px; left: 1280px;">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">汽车</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-11 01:13:07</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">一个躁起来的轰鸣周末，你还觉得 F1 赛车 “不就是绕圈跑” 么</h1>
+                                <div class="news-description"><p>听腻了演唱会逛烦了展，明年这个周末不然玩儿点 High 的…</p></div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="news-item" style="background-image: url(./images/6.jpg); width: 320px; left: 1600px;">
+                        <div class="news-mask mask"></div>
+                        <article class="news-item-content">
+                            <div class="news-tag">
+                                <a class="news-tag-label" href="javascript:void(0);">公司</a>
+                                <span class="news-tag-seperator">|</span>
+                                <span class="news-tag-time">2017-04-08 08:00:09</span>
+                            </div>
+                            <a href="javascript:void(0);" class="news-link">
+                                <h1 class="news-headline">你只看到我「轻松筹」时的绝望，却不知道我有车有房</h1>
+                                <div class="news-description"><p>有多少人利用轻松筹，走上了致富之路。</p></div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <ol class="dots" id="js-dots">
+                    <li class="dot">1</li>
+                    <li class="dot">2</li>
+                    <li class="dot">3</li>
+                    <li class="dot">4</li>
+                    <li class="dot active">5</li>
+                    <li class="dot">6</li>
+                </ol>
+            </div>
+        </header>
+
+        <div class="search-zone state-open" id="search-zone">
+            <div class="search-zone-container">
+                <div class="close-zone">
+                    <span id="cancel-search">
+                        <i class="iconfont guanbi"></i>
+                    </span>
+                </div>
+                <div class="query-zone">
+                    <i class="iconfont search"></i>
+                    <input type="text" id="query-search">
+                </div>
+                <div class="search-ifr" style="">
+                    <ul class="search-list" id="search-list"></ul>
+                    <div class="load-more hide" id="search-load-more">
+                        <button id="next-page">加载更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="page-con">
+            <div class="content">
+                <div class="articles-list">
+                    <div class="list-section-title">
+                        <img src="./images/latest-posts.png" alt="">
+                    </div>
+                    <a href="./detail.html" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">公司</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">刚刚</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">0</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>Apple music 要出周边，你买不？</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>鞋子、帽子、T 恤、衬衫、裙子、夹克、毛衣、风衣、睡衣、拖鞋......苹果要卖这些产品的话，你买吗？</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/a1.png">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">minapp</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">14 分钟前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">0</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>你买不买得起房子？这款小程序帮你算 | 知晓程序 · MINA 奖</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>楼市凶猛！这款小程序，帮你算好买房这笔账。</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/a2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">视频</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">17 分钟前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">0</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>TechU：苹果 iPhone 8 独家爆料 | 范团视频</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>如果你的微信好友数不低于 100 人，且平时有刷朋友圈，那么你应该看过这种求助链接： 虽然医疗水平一直在进步，但因为遇到重大疾病而无力支撑家庭的事情一直在发生。而求助者筹款的方式，也从手捧着裱红纸小箱子，变成了转发着筹款链接。 然而在我们看到的筹款项目中，有的实况确如其文，有的夸大其词，有的，甚至原本就不需要筹款，只是将筹款平台当做自己的发家致富路。 互助平台多漏洞 笔者试着在轻松筹上发起了一个微小的筹款项目。 在没有上传任何身份认证或病情证明的情况下，这个筹款项目成功上线了，并成功筹集到了来自我和朋友的 4 块钱。 根据系统规定，提现余额之前需要先完成「项目验证」。我试着上传了几张无关的病情... </p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/a3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">公司</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">54 分钟前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">4</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>「高铁辐射」你也信？中学物理化学老师都要气死了</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>造谣者满纸荒唐言，中国高铁一把辛酸泪。</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/a4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">公司</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">1 小时前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">7</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>平壤的高层其实是面空心墙？我们去 Google Map 上探了个究竟</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>最怕自己的梦想被别人实现，比如说「瘦成一道闪电」。</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/a5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+
+                    <div class="list-section-title">
+                        <img src="./images/more-posts.png" alt="">
+                    </div>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">公司</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">7 小时前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">17</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>自暴自弃？仅 11 款 Win 10 手机获微软「创造者更新」支持</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>好在和大多数人都没什么关系。</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/b1.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="post entry-list">
+                        <div class="entry-content">
+                            <div class="post-meta">
+                                <span class="tag">新创</span>
+                                <span class="seperator">|</span>
+                                <div class="post-author">9 小时前</div>
+                                <div class="entry-comment-number">
+                                    <i class="iconfont pinglun"></i>
+                                    <span class="number">1</span>
+                                </div>
+                            </div>
+                            <div class="entry-header">
+                                <h1 class="entry-name">
+                                    <span>当 QQ 搭上《速 8》，这样飙起来才够嗨！</span>
+                                </h1>
+                            </div>
+                            <div class="summary">
+                                <p>当 QQ-AR 搭上《速 8》，飙起来足够嗨。</p>
+                            </div>
+                            <div class="clear">
+                                <div class="post-thumb">
+                                    <img src="./images/b2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="post-separator"></span>
+                    </a>
+
+                </div>
+                <div class="loading" id="loading-more-container">
+                    <a class="load-more-link" href="javascript:void(0);" style="display: inline-block;">
+                        <i class="iconfont more"></i>
+                    </a>
+                    <a class="no-articles hide" href="javascript:void(0);">
+                        没有更多了
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+
+                <div class="footer-header">
+
+                    <div class="subscribe">
+                        <ol id="mail-subscribe">
+                            <div id="mc_embed_signup">
+                                <form action="" method="post" class="validate">
+                                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="填写邮箱，订阅我们">
+                                    <input type="submit" value="订阅" name="subscribe" id="mc-embedded-subscribe" class="js-animate">
+                                    <i class="iconfont subscribe-icon" id="js-animate"></i>
+                                </form>
+                            </div>
+                        </ol>
+                    </div>
+
+                    <ul class="about">
+                        <li><a href="javascript:void(0);">关于我们</a></li>
+                        <li><a href="javascript:void(0);">加入我们</a></li>
+                        <li><a href="javascript:void(0);">商务合作</a></li>
+                    </ul>
+                </div>
+
+                <div class="social-show">
+                    <a href="javascript:void(0);">
+                        <span>
+                          <i class="iconfont mail"></i>
+                        </span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <span>
+                          <i class="iconfont xinlangweibo"></i>
+                        </span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <span>
+                          <i class="iconfont weixin"></i>
+                        </span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <span class="m-r-0">
+                          <i class="iconfont twitter"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <p>Copyright © ifanr 2008 - 2016<br><a href="javascript:void(0);">版权所有 广州爱范儿科技股份有限公司<br>粤 ICP 备 10211557 号</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--头部导航栏js-->
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if($(window).scrollTop() <= 80){
+                    $('.header-nav').css({position:'fixed',backgroundColor:'transparent'});
+                }else{
+                    $('.header-nav').css({position:'fixed',backgroundColor:'#000'});
+                }
+            });
+            $('.search-button').click(function() {
+                $('#search-zone').css('transform','translate3d(0, 0, 0)')
+                $('.global-navigator').removeClass('slide-in-down');
+                $('#global-nav-overlay').css({opacity:0}).addClass('hide');
+
+            });
+            $('.guanbi').click(function() {
+                $('#search-zone').css('transform','translate3d(100%, 0, 0)')
+
+            });
+            $('#menu-button').click(function() {
+                $('.global-navigator').addClass('slide-in-down');
+                $('#global-nav-overlay').removeClass('hide').css({opacity:1});
+            });
+            $('#global-nav-overlay').click(function() {
+                $('.global-navigator').removeClass('slide-in-down');
+                $('#global-nav-overlay').css({opacity:0}).addClass('hide');
+
+            });
+        });
+    </script>
+    <!--头部轮播图js部分-->
+    <script>
+        $(function() {
+            var timer = null;
+            var width = $(window).width();
+            var a = 0;
+            oland();
+            fun();
+            $(window).resize(function() {
+                oland();
+            });
+            function oland() {
+                width = $(window).width();
+                $('#banner .swipe-wrap').css('width',width*6+'px');
+                $('#banner .news-item').each(function(i) {
+                    $('#banner .news-item').eq(i).css({width:width,left:i*width});
+                });
+                $('.news-headline').css('width',width-30);
+                $('.news-description p').css('width',width-30);
+            }
+
+            timer = setInterval(fun,3000);
+
+            function fun() {
+                $('#banner .swipe-wrap').css('left',-a*width);
+                $('#js-dots .dot').eq(a).addClass('active').siblings().removeClass('active');
+                a++;
+                if(a%7 == 6){
+                    a=0;
+                }
+            }
+
+            $('#js-dots .dot').click(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                a = $(this).index();
+                fun();
+                clearInterval(timer);
+                timer = setInterval(fun,3000);
+            });
+
+        });
+    </script>
+    <!--内容部分js-->
+    <script>
+        $(function() {
+            if($(window).width() > $(window).height()){
+                $('#post .post-meta').css('margin-top',16);
+            }else{
+                $('#post .post-meta').css('margin-top',0);
+            }
+            $(window).resize(function() {
+                if($(window).width() > $(window).height()){
+                    $('#post .post-meta').css('margin-top',16);
+                }else{
+                    $('#post .post-meta').css('margin-top',0);
+                }
+            })
+        });
+    </script>
+    <!--底部部分js-->
+    <script>
+        $(function() {
+            $('#mce-EMAIL').focus(function() {
+                $('#mc-embedded-subscribe').css('transform','translateX(0)');
+                $('#js-animate').css('transform','translateX(-70px)');
+            }).blur(function() {
+                $('#mc-embedded-subscribe').css('transform','translateX(100%)');
+                $('#js-animate').css('transform','translateX(0)');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+@charset "utf-8";
+/*玩物店公共初始化样式*/
+html {
+  height: 100%;
+  display: block;
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  background-color: rgba(135, 137, 151, 0.1);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  user-drag: none;
+  background-attachment: fixed;
+  background-color: #f9f9f9;
+  color: #4b4d5a;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: auto;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  word-wrap: break-word;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  outline: 0;
+  color: inherit;
+}
+img {
+  display: block;
+}
+i {
+  font-style: normal;
+  font-family: font-z;
+  display: block;
+}
+/*设置多次使用样式*/
+.bar {
+  background-color: #fff;
+  height: 80px;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+}
+.button {
+  background-color: #f9f9f9;
+  border: 1px solid #d9d9d9;
+  color: #9b9b9b;
+  border-radius: 27px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.button:hover {
+  background-color: #f3f3f3;
+}
+.icon {
+  font-family: iconfont!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+#body {
+  padding-top: 80px;
+}
+body {
+  background-image: url(../../image/toyshop/login-bg.jpg);
+}
+main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+main .modal-panel,
+main::after {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+main .modal-panel {
+  margin: auto;
+  background-color: #fff;
+  border-radius: 6px;
+  height: 140px;
+  overflow: hidden;
+  width: 250px;
+  z-index: 1;
+}
+main .modal-panel {
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  height: 350px;
+  width: 500px;
+  text-align: center;
+}
+main .modal-panel::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+main .modal-panel .button-close {
+  border: 0;
+  height: 15px;
+  left: 15px;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  width: 15px;
+  opacity: .5;
+}
+main .modal-panel .button-close .icon-iconfontguanbicopy {
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+main .modal-panel .button-close .icon-iconfontguanbicopy::before {
+  content: "\E614";
+}
+main .modal-panel .background-image {
+  background-color: rgba(135, 137, 151, 0.1);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+main .modal-panel .col-logo {
+  float: left;
+  height: 100%;
+  width: 50%;
+  background-image: url(../../image/toyshop/login-bg2.jpg);
+}
+main .modal-panel .col-logo .logo {
+  border-radius: 100%;
+  border: 2px solid #c5c5c5;
+  height: 19px;
+  margin: 80px 0 10px;
+  padding: 15px;
+  width: 19px;
+  display: inline-block;
+}
+main .modal-panel .col-logo .name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 110px;
+}
+main .modal-panel .col-logo .slogn {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+main .modal-panel .col-main {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+main .modal-panel .col-main .header {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 20px 0;
+}
+main .modal-panel .col-main .body {
+  padding: 37px 0;
+}
+main .modal-panel .col-main .body .wechat-login .tip {
+  font-size: 10px;
+  font-weight: 300;
+}
+main .modal-panel .col-main .body .wechat-login .qrcode {
+  height: 110px;
+  margin-bottom: 18px;
+  width: 110px;
+}
+main .modal-panel .col-main .body .or {
+  margin: 0 auto 18px;
+  position: relative;
+  width: 160px;
+}
+main .modal-panel .col-main .body .or .text {
+  background-color: #fff;
+  font-size: 12px;
+  padding: 0 12px;
+}
+main .modal-panel .col-main .body .or::after {
+  border-bottom: 1px solid #ececec;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+}
+main .modal-panel .col-main .body .weibo-login .icon-weibo {
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 6px;
+  vertical-align: middle;
+  color: #f8504f;
+  display: inline-block;
+}
+main .modal-panel .col-main .body .weibo-login .icon-weibo::before {
+  content: "\E609";
+}
+main .modal-panel .col-main .body .weibo-login .button-text {
+  vertical-align: middle;
+}
+main::after {
+  background-color: transparent;
+}
